@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>💘</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #f8cdda, #f88fb2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      max-width: 350px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: #fff;
+      color: #e75480;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Hola, tú 🤍</h2>
+  <p>
+    Esto se disfruta mejor<br>
+    con sonido…
+  </p>
+
+  <button onclick="playMusic()">🎶 Toca aquí</button>
+
+  <p id="hiddenText" style="display:none; margin-top:20px;">
+    Entonces dime…<br><br>
+    ¿quieres ser mi <b>San Valentín</b>? 💘
+  </p>
+</div>
+
+<audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  function playMusic() {
+    document.getElementById("music").play();
+    document.getElementById("hiddenText").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
